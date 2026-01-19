@@ -19,6 +19,17 @@ public class HealthController {
         );
     }
 
+    @GetMapping("/info")
+    public AppInfo info() {
+        return new AppInfo(
+                "Delivery Tech API",
+                "1.0.0",
+                "[Wellington Oliveira]",
+                "JDK 21",
+                "Spring Boot 3.2.x"
+        );
+    }
+
 
     public record AppInfo(
             String application,
